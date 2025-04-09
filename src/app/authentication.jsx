@@ -18,11 +18,11 @@ function Authentication({children}) {
         }
     }, [route, userData])
 
-    if (userData === null || userData === undefined)
-    {
-        console.log('returned null')
-        return null
-    }
+    // if (userData === null || userData === undefined)
+    // {
+    //     console.log('returned null')
+    //     return null
+    // }
 
     return children
 
