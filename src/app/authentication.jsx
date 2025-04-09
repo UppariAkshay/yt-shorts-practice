@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 function Authentication({children}) {
     const {userData} = useContext(AuthContext)
-    console.log(userData)
+    console.log(userData, 'this is user data')
     const route = useRouter()
 
     useEffect(() => {
@@ -18,12 +18,15 @@ function Authentication({children}) {
         }
     }, [route, userData])
 
-    if (userData===undefined || userData===null)
-        {
-            return null
-        }
+    if (userData === null || userData === undefined)
+    {
+        console.log('returned null')
+        return null
+    }
 
-  return children
+    return children
+
+  
 }
 
 export default Authentication

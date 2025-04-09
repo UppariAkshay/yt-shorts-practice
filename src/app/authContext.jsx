@@ -32,11 +32,12 @@ function AuthenticationProvider({children}) {
               // User is signed out
               // ...
               // redirect('/')
+              setUserData(null)
             }
           });
         // setUserData(['123213', '123cc23'])
 
-    }, [userData])
+    }, [])
 
     function signInClicked()
     {
